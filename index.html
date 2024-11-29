@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h1>Transaction Dashboard</h1>
+            <div class="categories">
+            
+            <button onclick="verifyPIN('account-details.html')">Account Details</button>
+           
+            <button onclick="verifyPIN('credit-card-details.html')">Credit Card Details</button>
+           
+            <button onclick="verifyPIN('debit-card-details.html')">Debit Card Details</button>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        
+        function verifyPIN(redirectPage) {
+            let enteredPin = prompt("Please enter your 4-digit PIN:");
+            if (enteredPin === "1234" && enteredPin.length === 4) { 
+                window.location.href = redirectPage;
+            } else {
+                alert("Incorrect PIN. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
